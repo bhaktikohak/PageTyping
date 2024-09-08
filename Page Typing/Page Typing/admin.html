@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Typing</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lsit.js">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="stylesheet" href="pages.js">
+    <link rel="stylesheet" href="lib/animate/animate.min.css">
+    <link rel="stylesheet" href="lib/easing/easing.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/waypoints/waypoints.min.js">
+    <link rel="stylesheet" href="lib/wow/wow.min.js">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+    <script src="js/lsit.js"></script>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div class="loading-spinner-container" id="loadingSpinner">
+            <img src="img/giphy.gif" alt="Loading Spinner">
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a class='navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5' href='/'>
+                <h3 class="m-0 text-primary">Page Typing</h3>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a class='nav-item nav-link active'
+                        href='/admin.html?code=YWRtaW5pc3RyYXRvckBnbWFpbC5jb20='>Dashboard</a>
+                    <a class='nav-item nav-link' href='/register.html?code=YWRtaW5pc3RyYXRvckBnbWFpbC5jb20='>Register
+                        Employee</a>
+                    <a class='nav-item nav-link' href='/login.html' onclick='logout()'>Logout</a>
+                </div>
+                <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">ADMIN<i
+                        class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Jobs Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <h4 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">REGISTERED EMPLOYEES</h4>
+                <a href='/register?code=YWRtaW5pc3RyYXRvckBnbWFpbC5jb20=' style='color: red; font-family: \' Segoe UI\',
+                    Tahoma, Geneva, Verdana, sans-serif; font-variant: small-caps;'>Registration?</a>
+                <a href='/admin-login.html' onclick='logout()' style='color: rgb(0, 137, 9); font-family: \' Segoe UI\',
+                    Tahoma, Geneva, Verdana, sans-serif; font-variant: small-caps;'>Logout</a>
+                <p
+                    style="color: rgb(0, 137, 9); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-variant: small-caps;">
+                    Total Employees:- <span id="total_employees">0</span></p>
+                <hr>
+                <div class="row" style="text-align: center; height: 13cm; overflow: auto;">
+                    <div class="col-lg-12">
+                        <table id="customers">
+                            <tr>
+                                <td>Employees</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const _0x4e8caf = _0x1bb3; (function (_0x2dc721, _0x4c8cb9) { const _0x1c0998 = _0x1bb3, _0x4c0af8 = _0x2dc721(); while (!![]) { try { const _0x5675cf = parseInt(_0x1c0998(0x1d4)) / 0x1 * (-parseInt(_0x1c0998(0x1ba)) / 0x2) + parseInt(_0x1c0998(0x1ad)) / 0x3 * (parseInt(_0x1c0998(0x1b3)) / 0x4) + parseInt(_0x1c0998(0x1cc)) / 0x5 + -parseInt(_0x1c0998(0x1bc)) / 0x6 * (parseInt(_0x1c0998(0x1cf)) / 0x7) + -parseInt(_0x1c0998(0x1d6)) / 0x8 + parseInt(_0x1c0998(0x1d0)) / 0x9 * (parseInt(_0x1c0998(0x1c9)) / 0xa) + -parseInt(_0x1c0998(0x1cd)) / 0xb * (-parseInt(_0x1c0998(0x1aa)) / 0xc); if (_0x5675cf === _0x4c8cb9) break; else _0x4c0af8['push'](_0x4c0af8['shift']()); } catch (_0x3b6e3b) { _0x4c0af8['push'](_0x4c0af8['shift']()); } } }(_0x15d5, 0x5574c)); if (sessionStorage[_0x4e8caf(0x1a6)]('sessionid') == null || sessionStorage[_0x4e8caf(0x1a6)](_0x4e8caf(0x1c5)) == 'null') location = 'admin-login.html'; else { const queryParams = new URLSearchParams(window[_0x4e8caf(0x1c7)][_0x4e8caf(0x1c8)]), param1Value = queryParams[_0x4e8caf(0x1ae)](_0x4e8caf(0x1b8)); param1Value == sessionStorage['getItem'](_0x4e8caf(0x1c5))[_0x4e8caf(0x1c4)](_0x4e8caf(0x1d3))[0x1] ? employee_list() : location = _0x4e8caf(0x1bf); } function _0x15d5() { const _0x174fb1 = ['2yekDnO', 'lastDate', '11562fmlQuU', 'getElementById', '\x20onclick=\x22updateDetails(this)\x22\x20class=\x22button-17\x22>Update\x20Details</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=', 'admin-login.html', 'value', '<br><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=', '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Set:\x20', 'updationForm\x20', 'split', 'sessionid', 'email', 'location', 'search', '18700LuSXlw', 'ceil', 'style', '3125400PeEXok', '11YgdusY', 'startDate', '301ebtqnx', '675XvjMYM', '\x20onclick=\x22cancleUpdate(this)\x22\x20class=\x22button-17\x22>Cancel</button>', 'pagesCompleted', 'ilu', '559934cSoTms', 'loadingSpinner', '2703064oyhxru', 'getItem', '\x22\x20style=\x22text-align:center\x22></div><hr>', 'display', 'updateLastDate', '4129116HXhvoX', 'Count', 'none', '9621GTDcCm', 'get', 'password', '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Last\x20Date:\x20', 'innerHTML', '\x20onclick=\x22checkResult(this)\x22\x20class=\x22button-17\x22>Check\x20Result</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=', '276gjwKab', '\x20onclick=\x22updateDetailsForm(this)\x22\x20class=\x22button-17\x22>Update\x20Form</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=', '\x20onclick=\x22checkDashboard(this)\x22\x20class=\x22button-17\x22>Dashboard</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=', 'Items', '\x20onclick=\x22deleteUser(this)\x22\x20style=\x22color:red\x22\x20class=\x22button-17\x22>Delete\x20User</button><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22updationForm\x20', 'code', 'fullname']; _0x15d5 = function () { return _0x174fb1; }; return _0x15d5(); } function show(_0x3277e7) { const _0x436366 = _0x4e8caf; document[_0x436366(0x1bd)]('total_employees')['innerHTML'] = _0x3277e7[_0x436366(0x1ab)]; for (var _0x862b77 = 0x0; _0x862b77 < _0x3277e7['Count']; _0x862b77++) { const _0x2f91e2 = new Date(_0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1ce)]['S']), _0x58f5fb = new Date(_0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1bb)]['S']), _0x4eda08 = _0x58f5fb - _0x2f91e2, _0x46f6ab = Math[_0x436366(0x1ca)](_0x4eda08 / (0x3e8 * 0x3c * 0x3c * 0x18)), _0x3710d1 = new Date(), _0x52bd60 = _0x58f5fb - _0x3710d1, _0x31a4ed = Math[_0x436366(0x1ca)](_0x52bd60 / (0x3e8 * 0x3c * 0x3c * 0x18)); document[_0x436366(0x1bd)]('customers')[_0x436366(0x1b1)] += '<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Name:\x20' + _0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1b9)]['S'] + '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20' + _0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1c6)]['S'] + '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Pages\x20Completed:\x20' + _0x3277e7['Items'][_0x862b77][_0x436366(0x1d2)]['S'] + _0x436366(0x1c2) + _0x3277e7[_0x436366(0x1b6)][_0x862b77]['pagesCount']['S'] + '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Starting\x20Date:\x20' + _0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1ce)]['S'] + _0x436366(0x1b0) + _0x3277e7['Items'][_0x862b77][_0x436366(0x1bb)]['S'] + '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Total\x20Days:\x20' + _0x46f6ab + '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Days\x20Left:\x20' + _0x31a4ed + '<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Account\x20Password\x20:\x20' + _0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1af)]['S'] + _0x436366(0x1c1) + _0x3277e7['Items'][_0x862b77][_0x436366(0x1c6)]['S'] + _0x436366(0x1b2) + _0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1c6)]['S'] + _0x436366(0x1b5) + _0x3277e7[_0x436366(0x1b6)][_0x862b77]['email']['S'] + _0x436366(0x1b4) + _0x3277e7['Items'][_0x862b77]['email']['S'] + _0x436366(0x1b7) + _0x3277e7[_0x436366(0x1b6)][_0x862b77][_0x436366(0x1c6)]['S'] + _0x436366(0x1a7); } document[_0x436366(0x1bd)](_0x436366(0x1d5))[_0x436366(0x1cb)][_0x436366(0x1a8)] = _0x436366(0x1ac); } function updateDetailsForm(_0x8a0c2e) { const _0x20c109 = _0x4e8caf; document['getElementById'](_0x20c109(0x1c3) + _0x8a0c2e['id'])[_0x20c109(0x1b1)] = '<hr><h5>UPDATION\x20FORM</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Name</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22updateName\x22\x20placeholder=\x22Updated\x20Name\x22><br><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Last\x20Date</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22date\x22\x20id=\x22updateLastDate\x22\x20placeholder=\x22Last\x20Date\x20Update\x22><br><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>New\x20Password</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22updatePassword\x22\x20placeholder=\x22New\x20Password\x22><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=' + _0x8a0c2e['id'] + _0x20c109(0x1be) + _0x8a0c2e['id'] + _0x20c109(0x1d1); } function updateDetails(_0x1d2215) { const _0x54c7d0 = _0x4e8caf; var _0x26ff12 = document[_0x54c7d0(0x1bd)]('updateName')[_0x54c7d0(0x1c0)], _0x427dbd = document[_0x54c7d0(0x1bd)](_0x54c7d0(0x1a9))[_0x54c7d0(0x1c0)], _0x1cad8b = document[_0x54c7d0(0x1bd)]('updatePassword')['value']; updateUserDetails(_0x1d2215['id'], _0x26ff12, _0x427dbd, _0x1cad8b); } function cancleUpdate(_0x22b82a) { const _0x5b637e = _0x4e8caf; document[_0x5b637e(0x1bd)](_0x5b637e(0x1c3) + _0x22b82a['id'])['innerHTML'] = ''; } function checkResult(_0x4b3cea) { getUserData(_0x4b3cea['id']); } function _0x1bb3(_0x36d9d6, _0x1cd932) { const _0x15d550 = _0x15d5(); return _0x1bb3 = function (_0x1bb303, _0x356fa1) { _0x1bb303 = _0x1bb303 - 0x1a6; let _0x1f7b53 = _0x15d550[_0x1bb303]; return _0x1f7b53; }, _0x1bb3(_0x36d9d6, _0x1cd932); } function checkDashboard(_0x36ef16) { getUserDashboard(_0x36ef16['id']); }
+        </script>
+
+        <style>
+            #customers {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                border-collapse: collapse;
+                font-size: 18px;
+                width: 100%;
+            }
+
+            #customers td,
+            #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+            /* CSS */
+            .button-17 {
+                align-items: center;
+                appearance: none;
+                background-color: #ffffff;
+                border-radius: 24px;
+                border-style: none;
+                box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+                box-sizing: border-box;
+                color: #3c4043;
+                cursor: pointer;
+                display: inline-flex;
+                fill: currentcolor;
+                font-family: "Google Sans", Roboto, Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                height: 38px;
+                justify-content: center;
+                letter-spacing: .25px;
+                line-height: normal;
+                max-width: 100%;
+                overflow: visible;
+                padding: 2px 24px;
+                position: relative;
+                text-align: center;
+                text-transform: none;
+                transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                width: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                will-change: transform, opacity;
+                z-index: 0;
+            }
+
+            .button-17:hover {
+                background: #F6F9FE;
+                color: #174ea6;
+            }
+
+            .button-17:active {
+                box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+                outline: none;
+            }
+
+            .button-17:focus {
+                outline: none;
+                border: 2px solid #4285f4;
+            }
+
+            .button-17:not(:disabled) {
+                box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+            }
+
+            .button-17:not(:disabled):hover {
+                box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+            }
+
+            .button-17:not(:disabled):focus {
+                box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+            }
+
+            .button-17:not(:disabled):active {
+                box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+            }
+
+            .button-17:disabled {
+                box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+            }
+        </style>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

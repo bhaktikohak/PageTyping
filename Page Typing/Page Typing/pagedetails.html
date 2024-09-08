@@ -1,0 +1,256 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Page Typing</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Inter:wght@700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lsit.js">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="stylesheet" href="pages.js">
+    <link rel="stylesheet" href="lib/animate/animate.min.css">
+    <link rel="stylesheet" href="lib/easing/easing.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/waypoints/waypoints.min.js">
+    <link rel="stylesheet" href="lib/wow/wow.min.js">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body onload="getPage()">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div class="loading-spinner-container" id="loadingSpinner" style="display: none;">
+            <img src="img/giphy.gif" alt="Loading Spinner">
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5" href="/">
+                <h3 class="m-0 text-primary">Page Typing</h3>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a class="nav-item nav-link" href="/login.html" onclick="logout()">Logout</a>
+                </div>
+                <a href="" id="username" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Ruhani Dilip Kale</a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Jobs Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col" style="text-align: left; cursor: pointer;">
+                            <span onclick="back()">Back ←</span>
+                        </div>
+                        <div class="col" style="text-align: right; cursor: pointer;">
+                            <span id="fullscreen" onclick="toggleFullScreen()">Full screen ⬛</span>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <h4 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">PAGE DETAIL</h4>
+                <div class="row" style="text-align: center;"></div>
+                <div class="row" style="text-align: center;" id="pageDetails"><div class="col-sm-6" id="fieldDetails">
+                            <p>FIELD <span>1</span></p>
+                        </div>
+                        <div class="col-sm-6" id="fieldDetails">
+                            <p>ACCURACY:- <span id="percentage-1"></span></p>
+                        </div>
+                        <hr><div class="col-sm-4">
+                            <p id="textTitle">ORIGINAL TEXT</p><hr>
+                            <div id="OriginalText-1"><p style="color:rgb(40, 216, 52)">When you begin a journey, it's a good idea to have a mental map of the terrain you'll be passing through. The same is true for an intellectual journey, such as learning to write computer programs.</p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">ENTERED TEXT</p><hr>
+                            <div id="EnteredText-1"><p style="color:rgb(40, 216, 52)">When you begin a journey, it's a good idea to have a mental map of the terrain you'll be passing through. The same is true for an intellectual journey, such as learning to write computer programs. </p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">DIFFERENCE</p><hr>
+                            <div id="DiffText-1"><p style="color:rgb(40, 216, 52)"><span style="color:rgb(40, 216, 52)"> When </span><span style="color:rgb(40, 216, 52)"> you </span><span style="color:rgb(40, 216, 52)"> begin </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> journey, </span><span style="color:rgb(40, 216, 52)"> it's </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> good </span><span style="color:rgb(40, 216, 52)"> idea </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> have </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> mental </span><span style="color:rgb(40, 216, 52)"> map </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> terrain </span><span style="color:rgb(40, 216, 52)"> you'll </span><span style="color:rgb(40, 216, 52)"> be </span><span style="color:rgb(40, 216, 52)"> passing </span><span style="color:rgb(40, 216, 52)"> through. </span><span style="color:rgb(40, 216, 52)"> The </span><span style="color:rgb(40, 216, 52)"> same </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> true </span><span style="color:rgb(40, 216, 52)"> for </span><span style="color:rgb(40, 216, 52)"> an </span><span style="color:rgb(40, 216, 52)"> intellectual </span><span style="color:rgb(40, 216, 52)"> journey, </span><span style="color:rgb(40, 216, 52)"> such </span><span style="color:rgb(40, 216, 52)"> as </span><span style="color:rgb(40, 216, 52)"> learning </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> write </span><span style="color:rgb(40, 216, 52)"> computer </span><span style="color:rgb(40, 216, 52)"> programs. </span><span style="color:blue">(missing space)</span></p></div><hr>
+                        </div><div class="col-sm-6" id="fieldDetails">
+                            <p>FIELD <span>2</span></p>
+                        </div>
+                        <div class="col-sm-6" id="fieldDetails">
+                            <p>ACCURACY:- <span id="percentage-2"></span></p>
+                        </div>
+                        <hr><div class="col-sm-4">
+                            <p id="textTitle">ORIGINAL TEXT</p><hr>
+                            <div id="OriginalText-2"><p style="color:red">In this case, you'll need to know the basics of what computers are and how they work. You'll want to have some idea of what a computer program is and how one is created. Since you will be writing programs in the Java programming language,</p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">ENTERED TEXT</p><hr>
+                            <div id="EnteredText-2"><p style="color:red">In this case, you'll need to know the basics of what computer are and how they work. You'll want to have some idea of what a computer program is and how one is created. Since you will be writing programa in the Java programing language, </p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">DIFFERENCE</p><hr>
+                            <div id="DiffText-2"><p style="color:rgb(40, 216, 52)"><span style="color:rgb(40, 216, 52)"> In </span><span style="color:rgb(40, 216, 52)"> this </span><span style="color:rgb(40, 216, 52)"> case, </span><span style="color:rgb(40, 216, 52)"> you'll </span><span style="color:rgb(40, 216, 52)"> need </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> know </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> basics </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> what </span><span style="color:red"> computers </span><span style="color:rgb(40, 216, 52)"> are </span><span style="color:rgb(40, 216, 52)"> and </span><span style="color:rgb(40, 216, 52)"> how </span><span style="color:rgb(40, 216, 52)"> they </span><span style="color:rgb(40, 216, 52)"> work. </span><span style="color:rgb(40, 216, 52)"> You'll </span><span style="color:rgb(40, 216, 52)"> want </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> have </span><span style="color:rgb(40, 216, 52)"> some </span><span style="color:rgb(40, 216, 52)"> idea </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> what </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> computer </span><span style="color:rgb(40, 216, 52)"> program </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> and </span><span style="color:rgb(40, 216, 52)"> how </span><span style="color:rgb(40, 216, 52)"> one </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> created. </span><span style="color:rgb(40, 216, 52)"> Since </span><span style="color:rgb(40, 216, 52)"> you </span><span style="color:rgb(40, 216, 52)"> will </span><span style="color:rgb(40, 216, 52)"> be </span><span style="color:rgb(40, 216, 52)"> writing </span><span style="color:red"> programs </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> Java </span><span style="color:red"> programming </span><span style="color:rgb(40, 216, 52)"> language, </span></p></div><hr>
+                        </div><div class="col-sm-6" id="fieldDetails">
+                            <p>FIELD <span>3</span></p>
+                        </div>
+                        <div class="col-sm-6" id="fieldDetails">
+                            <p>ACCURACY:- <span id="percentage-3"></span></p>
+                        </div>
+                        <hr><div class="col-sm-4">
+                            <p id="textTitle">ORIGINAL TEXT</p><hr>
+                            <div id="OriginalText-3"><p style="color:red">you'll want to know something about that language in particular and about the modern, networked computing environment for which Java is designed. As you read this chapter, don't worry if you can't understand everything in detail. (In fact, it would be impossible for you to learn all the details from the brief expositions in this chapter.)</p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">ENTERED TEXT</p><hr>
+                            <div id="EnteredText-3"><p style="color:red">You'll want to know something about that language in particular and about the modern, networked computing environment for which Java is designed. As you read this chapter, don't worry if you can't understand everything in detail. (In fact, it would be impossible for you to learn all the details form the brief expositions in this chapter.) </p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">DIFFERENCE</p><hr>
+                            <div id="DiffText-3"><p style="color:rgb(40, 216, 52)"><span style="color:red"> You'll </span><span style="color:rgb(40, 216, 52)"> want </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> know </span><span style="color:rgb(40, 216, 52)"> something </span><span style="color:rgb(40, 216, 52)"> about </span><span style="color:rgb(40, 216, 52)"> that </span><span style="color:rgb(40, 216, 52)"> language </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> particular </span><span style="color:rgb(40, 216, 52)"> and </span><span style="color:rgb(40, 216, 52)"> about </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> modern, </span><span style="color:rgb(40, 216, 52)"> networked </span><span style="color:rgb(40, 216, 52)"> computing </span><span style="color:rgb(40, 216, 52)"> environment </span><span style="color:rgb(40, 216, 52)"> for </span><span style="color:rgb(40, 216, 52)"> which </span><span style="color:rgb(40, 216, 52)"> Java </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> designed. </span><span style="color:rgb(40, 216, 52)"> As </span><span style="color:rgb(40, 216, 52)"> you </span><span style="color:rgb(40, 216, 52)"> read </span><span style="color:rgb(40, 216, 52)"> this </span><span style="color:rgb(40, 216, 52)"> chapter, </span><span style="color:rgb(40, 216, 52)"> don't </span><span style="color:rgb(40, 216, 52)"> worry </span><span style="color:rgb(40, 216, 52)"> if </span><span style="color:rgb(40, 216, 52)"> you </span><span style="color:rgb(40, 216, 52)"> can't </span><span style="color:rgb(40, 216, 52)"> understand </span><span style="color:rgb(40, 216, 52)"> everything </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> detail. </span><span style="color:rgb(40, 216, 52)"> (In </span><span style="color:rgb(40, 216, 52)"> fact, </span><span style="color:rgb(40, 216, 52)"> it </span><span style="color:rgb(40, 216, 52)"> would </span><span style="color:rgb(40, 216, 52)"> be </span><span style="color:rgb(40, 216, 52)"> impossible </span><span style="color:rgb(40, 216, 52)"> for </span><span style="color:rgb(40, 216, 52)"> you </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> learn </span><span style="color:rgb(40, 216, 52)"> all </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> details </span><span style="color:red"> form </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> brief </span><span style="color:rgb(40, 216, 52)"> expositions </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> this </span><span style="color:rgb(40, 216, 52)"> chapter.) </span><span style="color:blue">(missing space)</span></p></div><hr>
+                        </div><div class="col-sm-6" id="fieldDetails">
+                            <p>FIELD <span>4</span></p>
+                        </div>
+                        <div class="col-sm-6" id="fieldDetails">
+                            <p>ACCURACY:- <span id="percentage-4"></span></p>
+                        </div>
+                        <hr><div class="col-sm-4">
+                            <p id="textTitle">ORIGINAL TEXT</p><hr>
+                            <div id="OriginalText-4"><p style="color:red">Concentrate on learning enough about the big ideas to orient yourself, in preparation for the rest of the book. Most of what is covered in this chapter will be covered in much greater detail later in the book. A computer is a complex system consisting of many different components. But at the heart or the brain, if you want of the computer is a single component that does the actual computing.</p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">ENTERED TEXT</p><hr>
+                            <div id="EnteredText-4"><p style="color:red">Concentrate on learning enough about the big ideas to orient yourself, in preparation for the rest of the book. Most of what is covered in this chapter will be covered in much greater detail later in the book. A computer is a complex system consisting of many different components. But at the heart Or the brain, if you want of the computer is a single component that does the actual computing. </p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">DIFFERENCE</p><hr>
+                            <div id="DiffText-4"><p style="color:rgb(40, 216, 52)"><span style="color:rgb(40, 216, 52)"> Concentrate </span><span style="color:rgb(40, 216, 52)"> on </span><span style="color:rgb(40, 216, 52)"> learning </span><span style="color:rgb(40, 216, 52)"> enough </span><span style="color:rgb(40, 216, 52)"> about </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> big </span><span style="color:rgb(40, 216, 52)"> ideas </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> orient </span><span style="color:rgb(40, 216, 52)"> yourself, </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> preparation </span><span style="color:rgb(40, 216, 52)"> for </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> rest </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> book. </span><span style="color:rgb(40, 216, 52)"> Most </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> what </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> covered </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> this </span><span style="color:rgb(40, 216, 52)"> chapter </span><span style="color:rgb(40, 216, 52)"> will </span><span style="color:rgb(40, 216, 52)"> be </span><span style="color:rgb(40, 216, 52)"> covered </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> much </span><span style="color:rgb(40, 216, 52)"> greater </span><span style="color:rgb(40, 216, 52)"> detail </span><span style="color:rgb(40, 216, 52)"> later </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> book. </span><span style="color:rgb(40, 216, 52)"> A </span><span style="color:rgb(40, 216, 52)"> computer </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> complex </span><span style="color:rgb(40, 216, 52)"> system </span><span style="color:rgb(40, 216, 52)"> consisting </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> many </span><span style="color:rgb(40, 216, 52)"> different </span><span style="color:rgb(40, 216, 52)"> components. </span><span style="color:rgb(40, 216, 52)"> But </span><span style="color:rgb(40, 216, 52)"> at </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> heart </span><span style="color:red"> Or </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> brain, </span><span style="color:rgb(40, 216, 52)"> if </span><span style="color:rgb(40, 216, 52)"> you </span><span style="color:rgb(40, 216, 52)"> want </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> computer </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> single </span><span style="color:rgb(40, 216, 52)"> component </span><span style="color:rgb(40, 216, 52)"> that </span><span style="color:rgb(40, 216, 52)"> does </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> actual </span><span style="color:rgb(40, 216, 52)"> computing. </span><span style="color:blue">(missing space)</span></p></div><hr>
+                        </div><div class="col-sm-6" id="fieldDetails">
+                            <p>FIELD <span>5</span></p>
+                        </div>
+                        <div class="col-sm-6" id="fieldDetails">
+                            <p>ACCURACY:- <span id="percentage-5"></span></p>
+                        </div>
+                        <hr><div class="col-sm-4">
+                            <p id="textTitle">ORIGINAL TEXT</p><hr>
+                            <div id="OriginalText-5"><p style="color:red">This is the Central Processing Unit, or CPU. In a modern desktop computer, the CPU is a single "chip" on the order of one square inch in size. The job of the CPU is to execute programs. A program is simply a list of unambiguous instructions meant to be followed mechanically by a computer.</p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">ENTERED TEXT</p><hr>
+                            <div id="EnteredText-5"><p style="color:red">This is the Central Processing Unit, or CPU. In a modern desktop computer, the CPU is a single "chip" on the order of one square inch in size. The job of the CPU is to execute program. A program is simply a list of unambiguous instructions meant to be followed mechanically by a computer. </p></div><hr>
+                        </div>
+                        <div class="col-sm-4">
+                            <p id="textTitle">DIFFERENCE</p><hr>
+                            <div id="DiffText-5"><p style="color:rgb(40, 216, 52)"><span style="color:rgb(40, 216, 52)"> This </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> Central </span><span style="color:rgb(40, 216, 52)"> Processing </span><span style="color:rgb(40, 216, 52)"> Unit, </span><span style="color:rgb(40, 216, 52)"> or </span><span style="color:rgb(40, 216, 52)"> CPU. </span><span style="color:rgb(40, 216, 52)"> In </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> modern </span><span style="color:rgb(40, 216, 52)"> desktop </span><span style="color:rgb(40, 216, 52)"> computer, </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> CPU </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> single </span><span style="color:rgb(40, 216, 52)"> "chip" </span><span style="color:rgb(40, 216, 52)"> on </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> order </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> one </span><span style="color:rgb(40, 216, 52)"> square </span><span style="color:rgb(40, 216, 52)"> inch </span><span style="color:rgb(40, 216, 52)"> in </span><span style="color:rgb(40, 216, 52)"> size. </span><span style="color:rgb(40, 216, 52)"> The </span><span style="color:rgb(40, 216, 52)"> job </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> the </span><span style="color:rgb(40, 216, 52)"> CPU </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> execute </span><span style="color:red"> program. </span><span style="color:rgb(40, 216, 52)"> A </span><span style="color:rgb(40, 216, 52)"> program </span><span style="color:rgb(40, 216, 52)"> is </span><span style="color:rgb(40, 216, 52)"> simply </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> list </span><span style="color:rgb(40, 216, 52)"> of </span><span style="color:rgb(40, 216, 52)"> unambiguous </span><span style="color:rgb(40, 216, 52)"> instructions </span><span style="color:rgb(40, 216, 52)"> meant </span><span style="color:rgb(40, 216, 52)"> to </span><span style="color:rgb(40, 216, 52)"> be </span><span style="color:rgb(40, 216, 52)"> followed </span><span style="color:rgb(40, 216, 52)"> mechanically </span><span style="color:rgb(40, 216, 52)"> by </span><span style="color:rgb(40, 216, 52)"> a </span><span style="color:rgb(40, 216, 52)"> computer. </span><span style="color:blue">(missing space)</span></p></div><hr>
+                        </div></div>
+                <hr>
+            </div>
+        </div>
+        <!-- Jobs End -->
+        <script src="pages.js"></script>
+        <script>
+            const _0x57e73f=_0x1cc3;(function(_0x58ab19,_0x584747){const _0x4fe02f=_0x1cc3,_0x517111=_0x58ab19();while(!![]){try{const _0xe56293=-parseInt(_0x4fe02f(0x1aa))/0x1*(parseInt(_0x4fe02f(0x1a3))/0x2)+-parseInt(_0x4fe02f(0x19e))/0x3+parseInt(_0x4fe02f(0x1ae))/0x4*(-parseInt(_0x4fe02f(0x1b4))/0x5)+-parseInt(_0x4fe02f(0x1a4))/0x6+parseInt(_0x4fe02f(0x19d))/0x7*(-parseInt(_0x4fe02f(0x1a7))/0x8)+-parseInt(_0x4fe02f(0x1a9))/0x9+-parseInt(_0x4fe02f(0x1b0))/0xa*(-parseInt(_0x4fe02f(0x1ab))/0xb);if(_0xe56293===_0x584747)break;else _0x517111['push'](_0x517111['shift']());}catch(_0x4e60f8){_0x517111['push'](_0x517111['shift']());}}}(_0x3be5,0xaa4e5));(sessionStorage[_0x57e73f(0x1b6)](_0x57e73f(0x1b3))==null||sessionStorage[_0x57e73f(0x1b6)]('userData')==_0x57e73f(0x19c))&&(location=_0x57e73f(0x19f));document['getElementById'](_0x57e73f(0x1af))[_0x57e73f(0x1a1)]=userData['name'];const queryParams=new URLSearchParams(window[_0x57e73f(0x1a0)][_0x57e73f(0x1b5)]),param1Value=queryParams['get'](_0x57e73f(0x1a8));var pages;function _0x1cc3(_0x4aceb0,_0x3b8dd6){const _0x3be5ab=_0x3be5();return _0x1cc3=function(_0x1cc311,_0x175219){_0x1cc311=_0x1cc311-0x19c;let _0x338c66=_0x3be5ab[_0x1cc311];return _0x338c66;},_0x1cc3(_0x4aceb0,_0x3b8dd6);}if(userData['totalPages'][0x3]=='A')pages=dataA;else{if(userData[_0x57e73f(0x1a5)][0x3]=='B')pages=dataB;else userData[_0x57e73f(0x1a5)][0x3]=='C'&&(pages=dataC);}function _0x3be5(){const _0x387cf3=['split','10wtFaUb','6352854dPejNr','totalPages','\x22></span></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr><div\x20class=\x22col-sm-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20id=\x22textTitle\x22>ORIGINAL\x20TEXT</p><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22OriginalText-','7711568fAKJXI','page','6824205ZZrssd','71201MaWsxN','55DrNFpM','\x22></div><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-sm-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20id=\x22textTitle\x22>ENTERED\x20TEXT</p><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22EnteredText-','\x22></div><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','20552YNCNDL','username','11484370gPYBVR','length','</span></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-sm-6\x22\x20id=\x22fieldDetails\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>ACCURACY:-\x20<span\x20id=\x22percentage-','userData','1165JKKATU','search','getItem','pageDetails','null','7gyMInB','2131359zUbFwv','login.html','location','innerHTML'];_0x3be5=function(){return _0x387cf3;};return _0x3be5();}const originalPage=pages['page'+param1Value],originalPageList=originalPage[_0x57e73f(0x1a2)]('®');function insertBody(){const _0x291e9f=_0x57e73f;for(var _0xe3f6d7=0x0;_0xe3f6d7<originalPageList[_0x291e9f(0x1b1)];_0xe3f6d7++){document['getElementById'](_0x291e9f(0x1b7))[_0x291e9f(0x1a1)]+='<div\x20class=\x22col-sm-6\x22\x20id=\x22fieldDetails\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>FIELD\x20<span>'+(_0xe3f6d7+0x1)+_0x291e9f(0x1b2)+(_0xe3f6d7+0x1)+_0x291e9f(0x1a6)+(_0xe3f6d7+0x1)+_0x291e9f(0x1ac)+(_0xe3f6d7+0x1)+'\x22></div><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-sm-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20id=\x22textTitle\x22>DIFFERENCE</p><hr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22DiffText-'+(_0xe3f6d7+0x1)+_0x291e9f(0x1ad);}}
+            function jsonTostr(data){
+                var enteredFields = data["pageFields"];
+                var tempList = [];
+                for (var key in enteredFields) {
+                    if (enteredFields.hasOwnProperty(key)) {
+                        tempList.push(enteredFields[key]);
+                    }
+                }
+                return tempList;
+            }
+
+            function back(){
+                window.history.back();
+            }
+
+            // Function to toggle full-screen mode
+            function toggleFullScreen() {
+                    if (!document.fullscreenElement) {
+                        // If full-screen mode is not active, enter full-screen mode
+                        document.documentElement.requestFullscreen();
+                    } else {
+                        // If full-screen mode is active, exit full-screen mode
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        }
+                    }
+                }
+        </script>
+
+        <style>
+            #fullscreen-span {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+                display: inline-block;
+            }
+
+            #fieldDetails{
+                border-style: none;
+                padding-top: 12px;
+                font-size: 14px;
+                background-color: rgb(204, 255, 206);
+            }
+
+            #pageDetails{
+                background-color: rgb(255, 255, 255);
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            #textTitle{
+                font-size: 12px;
+                font-variant: small-caps;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: bold;
+                color: rgb(150, 150, 150);
+            }
+        </style>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+    <script src="js/lsit.js"></script>
+    <script src="js/main.js"></script>
+
+</body></html>

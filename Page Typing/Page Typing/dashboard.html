@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Typing</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lsit.js">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="stylesheet" href="pages.js">
+    <link rel="stylesheet" href="lib/animate/animate.min.css">
+    <link rel="stylesheet" href="lib/easing/easing.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/waypoints/waypoints.min.js">
+    <link rel="stylesheet" href="lib/wow/wow.min.js">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="https://pagestyping.github.io/pagetyping/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="https://pagestyping.github.io/pagetyping/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://pagestyping.github.io/pagetyping/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="https://pagestyping.github.io/pagetyping/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h3 class="m-0 text-primary">Page Typing</h3>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="login.html" onclick="logout()" class="nav-item nav-link">Logout</a>
+                </div>
+                <a href="" id="username" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOGIN<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Jobs Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <h4 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="color: #7b7b7b;">Welcome to Pagetyping</h4><hr>
+                <div class="row">
+                <div class="col-lg-12">
+                <table id="customers">
+                    <tr>
+                      <td>Name</td>
+                      <td id="name">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Email Id</td>
+                        <td id="email">Loading...</td>
+                      </tr>
+                    <tr>
+                        <td>Starting Date of Assignment</td>
+                        <td id="startDate">Loading...</td>
+                      </tr>
+                    <tr>
+                      <td>Last Date of Submission</td>
+                      <td id="lastDate">Loading...</td>
+                    </tr>
+                    <tr>
+                      <td>Total Number of Pages</td>
+                      <td id="totalPages">Loading...</td>
+                    </tr>
+                    <tr>
+                      <td>Total Completed Pages</td>
+                      <td id="completedPages">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td>Total Number of Days</td>
+                        <td id="totalDays">Loading...</td>
+                    <tr>
+                      <td>Total Number of Days Left</td>
+                      <td id="daysRemain">Loading...</td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+            <p style="color: red;">Note: You can submit your page only once you completed page.</p>
+            <div class="row">
+                <div class="col-lg-12" style="border-style: none; text-align: center;">
+                    <button class="button-17" id="startTyping"><a href="pages.html">START TYPING</a></button><br>
+                    <div id="generateResult"><a href="result.html">Generate Result</a></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12" style="border-style: none; text-align: center;">
+                    <br><hr>
+                    <p>For Support <a href="mailto:pagetypingteam@gmail.com?subject=Booktyping%20Support&body=Greeting%20From%20Pagetyping\n">Drop Email</a> or <a href="tel:+918434899800">Helpline call</a></p>
+                </div>
+                <div class="col-lg-12" style="border-style: none; text-align: center;">
+                    <br>
+                    <p><a href="training-video.html">Training Video</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Jobs End -->
+        <style>
+            #customers {
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            #customers td, #customers th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            
+            #customers tr:nth-child(odd){background-color: #f2f2f2;}
+            
+            #customers tr:hover {background-color: #ddd;}
+            
+            #customers th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #04AA6D;
+              color: white;
+            }
+
+            /* CSS */
+            .button-17 {
+            align-items: center;
+            appearance: none;
+            background-color: #fff;
+            border-radius: 24px;
+            border-style: none;
+            box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+            box-sizing: border-box;
+            color: #3c4043;
+            cursor: pointer;
+            display: inline-flex;
+            fill: currentcolor;
+            font-family: "Google Sans",Roboto,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 48px;
+            justify-content: center;
+            letter-spacing: .25px;
+            line-height: normal;
+            max-width: 100%;
+            overflow: visible;
+            padding: 2px 24px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            will-change: transform,opacity;
+            z-index: 0;
+            }
+
+            .button-17:hover {
+            background: #F6F9FE;
+            color: #174ea6;
+            }
+
+            .button-17:active {
+            box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+            outline: none;
+            }
+
+            .button-17:focus {
+            outline: none;
+            border: 2px solid #4285f4;
+            }
+
+            .button-17:not(:disabled) {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+            }
+
+            .button-17:not(:disabled):hover {
+            box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+            }
+
+            .button-17:not(:disabled):focus {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+            }
+
+            .button-17:not(:disabled):active {
+            box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+            }
+
+            .button-17:disabled {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+            }
+            </style>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <script>
+        if(sessionStorage.getItem("userData") == null || sessionStorage.getItem("userData") == "null"){
+            location = "login.html";
+        }else{
+            var userData =  JSON.parse(atob(sessionStorage.getItem("userData")))
+            // Specify the end date
+            const startDate = new Date(userData["startDate"]);
+            const endDate = new Date(userData["lastDate"]);
+            const difference = endDate - startDate;
+            const daysBetween = Math.ceil(difference / (1000 * 60 * 60 * 24));
+            const today = new Date();
+            const differenceMs = endDate - today;
+            const daysLeft = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
+            document.getElementById("username").innerHTML = userData["name"];
+            document.getElementById("email").innerHTML = userData["email"]
+            document.getElementById("name").innerHTML = userData["name"]
+            document.getElementById("startDate").innerHTML = userData["startDate"]
+            document.getElementById("lastDate").innerHTML = userData["lastDate"]
+            document.getElementById("totalPages").innerHTML = userData["totalPages"]
+            document.getElementById("completedPages").innerHTML = userData["pagesCompleted"]
+            document.getElementById("totalDays").innerHTML = daysBetween
+            document.getElementById("daysRemain").innerHTML = daysLeft
+            if(daysLeft == 0){
+                document.getElementById("startTyping").innerHTML = "Account Expired";
+            }
+
+            if(daysLeft%2 != 0){
+                document.getElementById("generateResult").innerHTML = "Result will be displayed after " + (daysLeft - (daysLeft-1)) + " day";
+            }else{
+                document.getElementById("generateResult").innerHTML = "<a href='result.html'>Result</a>";
+            }
+        }
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/wow/wow.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/easing/easing.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/waypoints/waypoints.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

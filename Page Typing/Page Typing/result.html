@@ -1,0 +1,236 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Page Typing</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Inter:wght@700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lsit.js">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="stylesheet" href="pages.js">
+    <link rel="stylesheet" href="lib/animate/animate.min.css">
+    <link rel="stylesheet" href="lib/easing/easing.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/waypoints/waypoints.min.js">
+    <link rel="stylesheet" href="lib/wow/wow.min.js">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body onload="getdata()">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div class="loading-spinner-container" id="loadingSpinner" style="display: none;">
+            <img src="img/giphy.gif" alt="Loading Spinner">
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="top: -100px;">
+            <a class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5" href="/">
+                <h3 class="m-0 text-primary">Page Typing</h3>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a class="nav-item nav-link" href="/login.html" onclick="logout()">Logout</a>
+                </div>
+                <a href="" id="username" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Ruhani Dilip Kale</a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Jobs Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="text-align: left; cursor: pointer;">
+                        <span onclick="back()">Back ←</span>
+                    </div>
+                    <div class="col" style="text-align: right; cursor: pointer;">
+                        <span id="fullscreen" onclick="toggleFullScreen()">⬛ <i class="fas fa-print print-icon" onclick="printDiv('result')"></i></span>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="container" id="result">
+                <h4 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">RESULT</h4><hr>
+                <div class="row" id="employeeDetails">
+                    <div class="col-lg-4">
+                        <p>Employee Name:- <span id="name">Ruhani Dilip Kale</span></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Work Assignment Date:- <span id="startDate">2024-05-20</span></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Work Submission Date:- <span id="lastDate">2024-05-26</span></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Pages Completed:- <span id="completedPages">6</span></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Total Accuracy:- <span id="totalAccuracy">44.21</span></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>Total Pages:- <span id="totalPages">500A</span></p>
+                    </div>
+                </div>
+                <div class="row" id="pages" style="text-align: center; background-color: rgb(217, 255, 230); font-weight: bold; font-size: medium;"><hr><div class="col-sm-3">
+        <p>Page 4</p>
+        </div>
+        <div class="col-sm-3" id="accuracy-4">16.67%</div>
+        <div class="col-sm-3" id="timespan-4">2024-20-05 23:32:23</div>
+        <div class="col-sm-3">
+            <p><a href="pagedetails.html?page=4">Check Details</a></p>
+        </div><hr><div class="col-sm-3">
+        <p>Page 6</p>
+        </div>
+        <div class="col-sm-3" id="accuracy-6">50.00%</div>
+        <div class="col-sm-3" id="timespan-6">2024-21-05 22:18:13</div>
+        <div class="col-sm-3">
+            <p><a href="pagedetails.html?page=6">Check Details</a></p>
+        </div><hr><div class="col-sm-3">
+        <p>Page 1</p>
+        </div>
+        <div class="col-sm-3" id="accuracy-1">20.00%</div>
+        <div class="col-sm-3" id="timespan-1">2024-20-05 18:6:27</div>
+        <div class="col-sm-3">
+            <p><a href="pagedetails.html?page=1">Check Details</a></p>
+        </div><hr><div class="col-sm-3">
+        <p>Page 5</p>
+        </div>
+        <div class="col-sm-3" id="accuracy-5">66.67%</div>
+        <div class="col-sm-3" id="timespan-5">2024-21-05 21:5:17</div>
+        <div class="col-sm-3">
+            <p><a href="pagedetails.html?page=5">Check Details</a></p>
+        </div><hr><div class="col-sm-3">
+        <p>Page 3</p>
+        </div>
+        <div class="col-sm-3" id="accuracy-3">28.57%</div>
+        <div class="col-sm-3" id="timespan-3">2024-20-05 21:38:34</div>
+        <div class="col-sm-3">
+            <p><a href="pagedetails.html?page=3">Check Details</a></p>
+        </div><hr><div class="col-sm-3">
+        <p>Page 2</p>
+        </div>
+        <div class="col-sm-3" id="accuracy-2">83.33%</div>
+        <div class="col-sm-3" id="timespan-2">2024-20-05 20:58:55</div>
+        <div class="col-sm-3">
+            <p><a href="pagedetails.html?page=2">Check Details</a></p>
+        </div></div>
+                <hr>
+            </div>
+        </div>
+        <!-- Jobs End -->
+        <script src="pages.js"></script> 
+        <script>
+            var _0x11222b=_0x21db;function _0x2d49(){var _0x1ad13d=['username','startDate','167356eymmVj','24209752QsKgHO','innerHTML','completedPages','9144498XkkzhX','940071iqlAWA','359640WvVhcy','lastDate','41168DGERDE','login.html','pagesCompleted','291qPTrEx','null','totalPages','getElementById','4015350dHmQLj','userData','getItem','name'];_0x2d49=function(){return _0x1ad13d;};return _0x2d49();}function _0x21db(_0x697643,_0x3f1f20){var _0x2d491b=_0x2d49();return _0x21db=function(_0x21dbc4,_0x4bb4c9){_0x21dbc4=_0x21dbc4-0xcf;var _0x2c1d86=_0x2d491b[_0x21dbc4];return _0x2c1d86;},_0x21db(_0x697643,_0x3f1f20);}(function(_0x1a83d6,_0x1e0842){var _0x23e3a3=_0x21db,_0x468566=_0x1a83d6();while(!![]){try{var _0x2112cc=parseInt(_0x23e3a3(0xd9))/0x1+parseInt(_0x23e3a3(0xda))/0x2+-parseInt(_0x23e3a3(0xdf))/0x3*(parseInt(_0x23e3a3(0xdc))/0x4)+-parseInt(_0x23e3a3(0xe3))/0x5+-parseInt(_0x23e3a3(0xd8))/0x6+-parseInt(_0x23e3a3(0xd4))/0x7+parseInt(_0x23e3a3(0xd5))/0x8;if(_0x2112cc===_0x1e0842)break;else _0x468566['push'](_0x468566['shift']());}catch(_0x59fee5){_0x468566['push'](_0x468566['shift']());}}}(_0x2d49,0xc2835));(sessionStorage[_0x11222b(0xd0)](_0x11222b(0xcf))==null||sessionStorage[_0x11222b(0xd0)](_0x11222b(0xcf))==_0x11222b(0xe0))&&(location=_0x11222b(0xdd));document['getElementById'](_0x11222b(0xd2))[_0x11222b(0xd6)]=userData['name'],document['getElementById'](_0x11222b(0xd1))['innerHTML']=userData[_0x11222b(0xd1)],document['getElementById'](_0x11222b(0xd3))['innerHTML']=userData['startDate'],document[_0x11222b(0xe2)](_0x11222b(0xdb))[_0x11222b(0xd6)]=userData['lastDate'],document[_0x11222b(0xe2)](_0x11222b(0xd7))[_0x11222b(0xd6)]=userData[_0x11222b(0xde)],document[_0x11222b(0xe2)](_0x11222b(0xe1))[_0x11222b(0xd6)]=userData[_0x11222b(0xe1)];
+            function back(){
+                window.history.back();
+            }
+
+            // Function to toggle full-screen mode
+            function toggleFullScreen() {
+                    if (!document.fullscreenElement) {
+                        // If full-screen mode is not active, enter full-screen mode
+                        document.documentElement.requestFullscreen();
+                    } else {
+                        // If full-screen mode is active, exit full-screen mode
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        }
+                    }
+                }
+
+                function printDiv(divId) {
+                    var printContents = document.getElementById(divId).innerHTML;
+                    var originalContents = document.body.innerHTML;
+                    document.body.innerHTML = printContents;
+                    window.print();
+                    document.body.innerHTML = originalContents;
+                }
+        </script>
+
+        <style>
+            @media print {
+                body * {
+                    visibility: hidden;
+                }
+                #divToPrint, #divToPrint * {
+                    visibility: visible;
+                }
+            }
+            /* Style for the span */
+            #fullscreen-span {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+                display: inline-block;
+            }
+        
+            #employeeDetails{
+                border-style: none;
+                text-align: center;
+                font-size: medium;
+                font-weight: bold;
+                border-style: none;
+                background-color: rgb(158, 255, 174);
+                padding-top: 28px;
+                padding-bottom: 28px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            #pages{
+                font-size: 15px;
+                font-variant:small-caps;
+                font-family:sans-serif;
+                height: 10cm;
+                overflow: auto;
+            }
+        </style>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+    <script src="js/lsit.js"></script>
+    <script src="js/main.js"></script>
+<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'889f7e8e2e414697',t:'MTcxNjc0NDY0MC4xMjMwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>

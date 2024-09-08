@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Typing</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lsit.js">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="stylesheet" href="pages.js">
+    <link rel="stylesheet" href="lib/animate/animate.min.css">
+    <link rel="stylesheet" href="lib/easing/easing.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.js">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/waypoints/waypoints.min.js">
+    <link rel="stylesheet" href="lib/wow/wow.min.js">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="https://pagestyping.github.io/pagetyping/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="https://pagestyping.github.io/pagetyping/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://pagestyping.github.io/pagetyping/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="https://pagestyping.github.io/pagetyping/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h3 class="m-0 text-primary">Page Typing</h3>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dashboard</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                            <a href="login.html" class="dropdown-item">Employee Login</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <div class="container-fluid" id="loginPage">
+            <div class="row" id="loginContent">
+                <div class="col-lg-12" id="title">
+                    <h3>Administrator</h3>
+                </div>
+                <div class="col-lg-12">
+                    <input type="email" placeholder="Username/email" id="username">
+                </div>
+                <div class="col-lg-12">
+                    <input type="password" placeholder="Password" id="password">
+                    <span onclick="showPassword()" style="font-size: 15px; cursor: pointer;">Show Password</span>
+                </div>
+                <div class="col-lg-12" id="alert">
+                    <button class="button-29" id="username" onclick="Login()">LOGIN</button>
+                    <span id="test"></span>
+                </div>
+            </div>
+        </div>
+        <script>
+            if(sessionStorage.getItem("userData") != null && sessionStorage.getItem("userData") != "null"){
+                location = "dashboard.html";
+            }
+
+            function Login(){
+                const data = {
+                    "username": document.getElementById("username").value,
+                    "password": document.getElementById("password").value
+                }
+                
+                if(data["username"] != "" && data["password"] != ""){
+                    if(data["username"] == atob("YWRtaW5pc3RyYXRvckBnbWFpbC5jb20=")){
+                        if(data["password"] == atob("bXlhZG1pbkAxMjM0")){
+                            sessionStorage.setItem("sessionid", "bXlhZG1pbkAxMjM0iluYWRtaW5pc3RyYXRvckBnbWFpbC5jb20=")
+                            location = "admin.html?code=YWRtaW5pc3RyYXRvckBnbWFpbC5jb20=";
+                        }else{
+                            document.getElementById("test").innerHTML = "Incorrect Password";
+                        }
+                    }else{
+                        document.getElementById("test").innerHTML = "Incorrect Username";
+                    }
+                }else{
+                    if(data["username"] == ""){
+                        document.getElementById("test").innerHTML = "Please Enter Email/Username";
+                    }else{
+                        document.getElementById("test").innerHTML = "Please Enter Password";
+                    }
+                }
+            }
+
+            function showPassword() {
+                var passwordInput = document.getElementById("password");
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                } else {
+                    passwordInput.type = "password";
+            }
+            }
+        </script>
+
+        <style>
+            #loginPage{
+                width: 9cm;
+                margin-top: 1cm;
+                border-style: solid;
+                border-color: rgb(191, 191, 191);
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 3px 5px #bcbcbc;
+            }
+
+            #title{
+                margin-top: 1cm;
+                margin-bottom: 20px;
+            }
+
+            #username{
+                width: 8cm;
+                height: 40px;
+                margin-bottom: 25px;
+            }
+
+            #password{
+                width: 8cm;
+                height: 40px;
+                margin-bottom: 20px;
+            }
+
+            /* CSS */
+            #alert{
+                margin-bottom: 1cm;
+            }
+
+            .button-29 {
+            align-items: center;
+            width: 8cm;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #00d700 0, #2ed178 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+            }
+
+            .button-29:focus {
+            box-shadow: #3ce086 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3ce05d 0 -3px 0 inset;
+            }
+
+            .button-29:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3ce065 0 -3px 0 inset;
+            transform: translateY(-2px);
+            }
+
+            .button-29:active {
+            box-shadow: #3ce080 0 3px 7px inset;
+            transform: translateY(2px);
+            }
+        </style>
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    
+                    <div class="col-lg-6 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="training-video.html">Training Video</a>
+                        <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="dashboard.html">Dashboard</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Wakad, Pune</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>ConnectWithCodesteam@gmail.com</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">ConnectWithCodes</a>, All Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/wow/wow.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/easing/easing.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/waypoints/waypoints.min.js"></script>
+    <script src="https://pagestyping.github.io/pagetyping/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
